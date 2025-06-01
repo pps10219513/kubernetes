@@ -1,4 +1,4 @@
-# 🐳 Práctica 3.1.1: K3s en modo Single-Node y despliegue de NGINX
+# 🐳 Práctica 5.4.1: K3s en modo Single-Node y despliegue de NGINX
 
 Este repositorio contiene las evidencias correspondientes a la **Práctica 3.1.1** del módulo de *Ciberseguridad en entornos de las tecnologías de la información*. El objetivo es realizar la instalación de **K3s en modo Single-Node**, desplegar un servicio **NGINX con 2 réplicas**, e instalar y validar el funcionamiento de **K9s**.
 

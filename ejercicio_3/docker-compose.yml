@@ -1,0 +1,13 @@
+version: '3'
+services:
+  app:
+    image: nginxdemos/hello
+    deploy:
+      replicas: 3
+  nginx:
+    image: nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "8080:80"
+
