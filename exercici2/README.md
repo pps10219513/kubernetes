@@ -1,55 +1,3 @@
-# 📡 Práctica 5.3: Prometheus y Grafana
-
-Este repositorio contiene los **dos ejercicios** correspondientes a la práctica **RA5.3 - Sistema de monitorización**, dentro del módulo de *Ciberseguridad en entornos de las tecnologías de la información*. El objetivo es implementar y validar un sistema de monitorización utilizando las herramientas **Prometheus**, **Grafana**, **Node Exporter** y **cAdvisor**.
-
----
-
-## 📁 Ejercicio 1 - Validación del Stack
-
-✅ En este primer ejercicio se ha desplegado correctamente el stack de monitorización. Las evidencias incluyen:
-
-- 📦 **Prometheus** recolectando métricas del sistema
-- 🖥️ **Node Exporter** instalado en el servidor
-- 📊 **Grafana** configurado en el cliente con dashboards funcionales
-- 🧮 **cAdvisor** monitorizando contenedores
-- 🔍 Visualización de métricas en tiempo real
-
-📸 Capturas de pantalla:
-- `cad.png` ➝ Interfaz de cAdvisor
-- `graphana.png` ➝ Dashboard de Grafana
-- `logs.png` ➝ Logs de funcionamiento del stack
-- `prometheus.png` ➝ Targets de Prometheus
-
----
-
-## 🧪 Ejercicio 2 - Monitorización Remota
-
-En el segundo ejercicio se ha configurado un entorno distribuido:
-
-- 🖥️ **Ubuntu Server**: Instalación de Prometheus y Node Exporter
-- 💻 **Ubuntu Desktop 24.10**: Instalación de Grafana y configuración del dashboard
-- 🌐 Exposición de métricas del servidor para ingesta remota
-- 📡 Visualización de métricas del servidor en el cliente mediante Grafana
-
----
-
-## 🎯 Objetivo de Aprendizaje
-
-Esta práctica permite trabajar el resultado de aprendizaje **RA5**:
-
-> "Analiza incidentes de ciberseguridad utilizando herramientas, mecanismos de detección y alertas de seguridad" 
-
----
-
-## 📚 Referencias
-
-- 🧠 [Introducción Prometheus & Grafana - Dinesh Murali](https://medium.com/@dineshmurali/introduction-to-monitoring-with-prometheus-grafana-ea338d93b2d9)
-- 🔗 [Prometheus](https://prometheus.io/)
-- 📊 [Grafana](https://grafana.com/)
-- 💾 [Node Exporter GitHub](https://github.com/prometheus/node_exporter)
-
----
-
 # 🐳 Práctica 5.2: Despliegue de clúster K3s en HA y servicio NGINX
 
 Este repositorio contiene las evidencias correspondientes a la **Práctica RA5.2** del módulo de *Ciberseguridad en entornos de las tecnologías de la información*. El objetivo es realizar la instalación y validación de un clúster **K3s en modo HA**, así como desplegar un servicio **NGINX** con **2 réplicas**, y validar su funcionamiento con **K9s**.
@@ -65,8 +13,11 @@ Se ha desplegado un clúster K3s en alta disponibilidad utilizando dos nodos:
 
 ### 📸 Evidencias:
 
-- `images/instalacio.png` ➝ Instalación del nodo `notabot` con parámetro `--cluster-init`.
-- `images/instalacio_slave.png` ➝ Unión del nodo `debian` al clúster utilizando `K3S_URL` y `K3S_TOKEN`.
+![Instalación del nodo notabot](images/instalacio.png)  
+> Instalación del nodo `notabot` con parámetro `--cluster-init`.
+
+![Unión del nodo debian al clúster](images/instalacio_slave.png)  
+> Unión del nodo `debian` al clúster utilizando `K3S_URL` y `K3S_TOKEN`.
 
 ---
 
@@ -80,8 +31,11 @@ kubectl apply -f nginx.yaml
 
 ### 📸 Evidencias:
 
-- `images/2 replicas funcionando.png` ➝ Comprobación de que las 2 réplicas están ejecutándose correctamente.
-- `images/svc.png` ➝ Verificación del servicio `nginx-service` y su asignación de puerto externo (pending si no hay LoadBalancer real).
+![2 réplicas funcionando](images/2%20replicas%20funcionando.png)  
+> Comprobación de que las 2 réplicas están ejecutándose correctamente.
+
+![Verificación del servicio nginx](images/svc.png)  
+> Verificación del servicio `nginx-service` y su asignación de puerto externo (pending si no hay LoadBalancer real).
 
 ---
 
@@ -91,9 +45,14 @@ Se ha utilizado la herramienta **K9s** para comprobar visualmente el estado de l
 
 ### 📸 Evidencias:
 
-- `images/k9s.png` ➝ Visualización en K9s del estado de los pods en ejecución.
-- `images/exportar_config.png` ➝ Exportación de la configuración desde K9s para facilitar el acceso futuro.
-- `images/funcionament.png` ➝ Visualización del servicio corriendo correctamente a nivel de interfaz.
+![Estado de los pods en K9s](images/k9s.png)  
+> Visualización en K9s del estado de los pods en ejecución.
+
+![Exportación de configuración](images/exportar_config.png)  
+> Exportación de la configuración desde K9s para facilitar el acceso futuro.
+
+![Servicio corriendo correctamente](images/funcionament.png)  
+> Visualización del servicio corriendo correctamente a nivel de interfaz.
 
 ---
 
